@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTT.Gui.Builder", "TTT.Gui.Builder\TTT.Gui.Builder.csproj", "{9245C398-E424-47BF-A5A8-88FE73A26CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTT.Gui.Builder.Sample", "TTT.Gui.Builder.Sample\TTT.Gui.Builder.Sample.csproj", "{C391170B-07E2-4000-B424-570FE227131F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9245C398-E424-47BF-A5A8-88FE73A26CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9245C398-E424-47BF-A5A8-88FE73A26CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9245C398-E424-47BF-A5A8-88FE73A26CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9245C398-E424-47BF-A5A8-88FE73A26CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C391170B-07E2-4000-B424-570FE227131F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C391170B-07E2-4000-B424-570FE227131F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C391170B-07E2-4000-B424-570FE227131F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C391170B-07E2-4000-B424-570FE227131F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {600E549E-E1E5-4183-B846-D6B229B76848}
+	EndGlobalSection
+EndGlobal
