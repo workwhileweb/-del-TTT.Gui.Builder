@@ -4,10 +4,10 @@
     {
         public static Form Test3()
         {
-            var lineImage = LineLabelTextButton.Create("hình ảnh", "...", "load");
-            lineImage.ButtonControl.Click += (_, _) =>
+            var lineImage = new LineLabelTextButton("hình ảnh", "...", "load");
+            lineImage.Button.Click += (_, _) =>
             {
-                MessageBox.Show(lineImage.TextControl.Text);
+                MessageBox.Show(lineImage.Text.Text);
             };
             var buttonLoadLanguage = Line.CreateButton("nạp", 2, (_, _) =>
             {
@@ -34,10 +34,10 @@
 
         public static Form Test2()
         {
-            var line = LineLabelTextButton.Create("điền giá trị", "nhập giá trị ở đây", "bấm tui");
-            line.ButtonControl.Click += (_, _) =>
+            var line = new LineLabelTextButton("điền giá trị", "nhập giá trị ở đây", "bấm tui");
+            line.Button.Click += (_, _) =>
             {
-                MessageBox.Show(line.TextControl.Text);
+                MessageBox.Show(line.Text.Text);
             };
             return GuiBuilder.CreateForm("xin chào", 400, 600, GuiBuilder.CreateTable(line, new Line()));
         }

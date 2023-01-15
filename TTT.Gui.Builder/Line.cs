@@ -2,8 +2,6 @@
 
 public class Line
 {
-    public LineItem[] Items { get; }
-
     public Line(params LineItem[] items)
     {
         Items = items;
@@ -17,14 +15,16 @@ public class Line
         }
     }
 
+    public LineItem[] Items { get; }
+
     public static LineItem Create(Control control, int width, int height = 1)
     {
         return new LineItem(control, colSpan: width, rowSpan: height);
     }
 
-    public static LineItem CreateButton(string text, int size, EventHandler onClick = null)
+    public static LineItem CreateButton(string text, int size, EventHandler? onClick = null)
     {
-        if(onClick is null) return Create(GuiBuilder.CreateButton(text), size);
+        if (onClick is null) return Create(GuiBuilder.CreateButton(text), size);
         var button = GuiBuilder.CreateButton(text);
         button.Click += onClick;
         return Create(button, size);

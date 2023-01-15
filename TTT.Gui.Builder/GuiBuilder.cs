@@ -120,6 +120,12 @@ public class GuiBuilder
         return new Line(items);
     }
 
+    // ReSharper disable once UnusedMember.Global
+    public static Form CreateForm(string text,int width, int height, params Line[] lines)
+    {
+        return CreateForm(text, width, height, CreateTable(lines));
+    }
+
     public static Form CreateForm(string text,int width, int height, params Control[] controls)
     {
         var form = new Form();
@@ -137,7 +143,10 @@ public class GuiBuilder
         form.Name = nameof(Form);
         form.StartPosition = FormStartPosition.CenterScreen;
         form.Text = text;
-        
+
+        form.FormBorderStyle = FormBorderStyle.FixedSingle;
+        form.MaximizeBox = false;
+
         form.Controls.AddRange(controls);
 
         var menu = controls.FirstOrDefault(control => control is MenuStrip);

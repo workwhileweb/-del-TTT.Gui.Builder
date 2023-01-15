@@ -2,32 +2,21 @@
 
 public class LineLabelTextButton : Line
 {
-    public LineLabelTextButton(params LineItem[] items) : base(items)
-    {
-    }
-
-    public static LineLabelTextButton Create(string label,
+    public LineLabelTextButton(string label,
         string text,
         string button,
         int labelSize = 2,
         int textSize = 6,
-        int buttonSize = 2)
+        int buttonSize = 2) : base(
+        CreateLabel(label, labelSize),
+        CreateTextBox(text, textSize),
+        CreateButton(button, buttonSize))
     {
-        var textControl = GuiBuilder.CreateTextBox(text);
-        var buttonControl = GuiBuilder.CreateButton(button);
-
-        var result = new LineLabelTextButton(
-            CreateLabel(label, labelSize), 
-            Create(textControl, textSize), 
-            Create(buttonControl,buttonSize))
-        {
-            TextControl = textControl,
-            ButtonControl= buttonControl
-        };
-        return result;
+        Text = (TextBox)Items[1].Control;
+        Button = (Button)Items[2].Control;
     }
 
-    public Button ButtonControl { get; set; }
+    public Button Button { get; set; }
 
-    public TextBox TextControl { get; set; }
+    public TextBox Text { get; set; }
 }
